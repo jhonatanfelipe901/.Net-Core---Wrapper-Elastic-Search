@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0;netstandard2.0;netcoreapp2.1</TargetFrameworks>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AssemblyVersion>1.3.0.2</AssemblyVersion>
+    <FileVersion>1.3.0.2</FileVersion>
+    <PackageTags>Elastic, ElasticSearch</PackageTags>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+    <PackageReleaseNotes>- Added the missing types to utilize the aggregation functions.</PackageReleaseNotes>
+    <Version>1.3.0.2</Version>
+    <PackageLicenseUrl>https://github.com/petertasner/ElasticSearchLite/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/petertasner/ElasticSearchLite</PackageProjectUrl>
+    <Company />
+    <Authors>Peter Tasner</Authors>
+    <RepositoryUrl>https://github.com/petertasner/ElasticSearchLite</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <Description>A simple .NET wrapper for ElasticSearch.Net</Description>
+    <Product>ElasticSearchLite.Net</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.0|AnyCPU'">
+    <LangVersion>7.3</LangVersion>
+    <DefineConstants>TRACE;DEBUG;NETCOREAPP;NETCOREAPP2_0;NETCOREAPP2_1</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Elasticsearch.Net" Version="6.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>
